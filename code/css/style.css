@@ -1,0 +1,251 @@
+body{
+    font-family: 'Biryani', sans-serif;
+    overflow-y: hidden;
+}
+
+button, input {
+    cursor: pointer;
+}
+
+.wrapper{
+    margin:0 auto;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+}
+
+#questions{
+    width: 1440px;
+    height: 1220px;
+}
+
+.header {
+    max-width: 100%;
+}
+
+.header h1{
+    text-align: center;
+    color: #000;
+    font-size: 32px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.header img{
+    position: absolute;
+    top: 0;
+    left: 24px;
+    margin-right: 318px;
+}
+
+.photo_header{
+    width: 179.486px;
+    height: 100.961px;
+    transform: rotate(-2.5deg);
+    flex-shrink: 0;
+}
+
+
+.title{
+    color: #000;
+    font-size: 40px;
+    font-weight: 600; 
+    margin-top: 42px;
+    font-style: normal;
+}
+
+#question{
+    color: #000;
+    font-size: 32px;
+    font-weight: 400;
+    margin: 15px 0;
+    font-style: normal;
+}
+
+#get_answer{
+    display: inline-flex;
+    height: 56px;
+    padding: 0px 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border: none;
+    border-radius: 50px;
+    background: #FFCB59;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.10), 1px 1px 4px 0px rgba(0, 0, 0, 0.10), 5px 5px 7px 0px rgba(0, 0, 0, 0.09), 11px 12px 10px 0px rgba(0, 0, 0, 0.05), 19px 22px 12px 0px rgba(0, 0, 0, 0.01), 29px 34px 13px 0px rgba(0, 0, 0, 0.00), 6px -5px 8px 0px rgba(0, 0, 0, 0.25) inset; 
+
+    color: #FFF;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/*-----radio_button----------------------------------------------------------*/
+
+.radio span{
+    color: #000;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+input[type=radio] {
+    appearance: none;
+    margin: 10px 35px 0px 0px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    border: 3px solid #000;
+    position: relative;
+    transition: .1s linear;
+}
+
+input[type=radio]::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    background-color: #FFCB59;
+    opacity: 0;
+    transition: .1s linear;
+}
+
+input[type=radio]:checked::before {
+    opacity: 1;
+}
+input[type=radio]:checked{
+    border: 3px solid #FFCB59;
+}
+
+#next_question{
+    display: inline-flex;
+    height: 56px;
+    padding: 10px 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 50px;
+    background: #FFCB59;
+    box-shadow: 8px -7px 12px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.right{
+    display: flex;
+    width: 1202px;
+    height: 56px;
+    padding: 0px 25px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 600;
+
+    border-radius: 50px;
+    background: #34EC47;
+    box-shadow: 8px -7px 12px 0px rgba(0, 0, 0, 0.25) inset;
+}
+.wrong{
+    display: flex;
+    width: 1202px;
+    height: 56px;
+    padding: 0px 25px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 600;
+
+    border-radius: 50px;
+    background: #FF3737;
+    box-shadow: 8px -9px 16px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.wrong_div{
+    display: flex;
+    flex-direction: column;
+}
+
+/*---view_answer-------------------------------------------------*/
+
+#view_answer{
+    display: inline-flex;
+    height: 56px;
+    padding: 10px 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 50px;
+    background: #FFCB59;
+    box-shadow: 8px -7px 12px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.view_answer{
+    display: flex;
+}
+
+#answer{
+    margin: 5px 0px 0px 30px;
+    color: #000;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+#total_div p{
+    color: #000;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.hidden{
+    display: none;
+}
+#btn1{
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+}
+.opend{
+    background-color: skyblue;
+}
+
+
+/*--shake----------------------------------------------------------------*/
+.shake {
+    animation: shake .5s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+      transform: translateX(-20px);
+    }
+    20%, 40%, 60%, 80% {
+      transform: translateX(20px);
+    }
+  }
